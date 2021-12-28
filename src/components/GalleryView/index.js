@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 function GalleryView({galleries}) {
   const { galleryId } = useParams();
   const choice = galleries.find(gallery => +galleryId === gallery.id)
+  console.log(choice.objects[0].images[0].baseimageurl)
     return (
       <h2>{choice.name}</h2>
     )
