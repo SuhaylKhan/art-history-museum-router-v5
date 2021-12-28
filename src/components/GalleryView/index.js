@@ -3,10 +3,9 @@ import { useParams } from 'react-router-dom';
 function GalleryView({galleries}) {
   const { galleryId } = useParams();
   const choice = galleries.find(gallery => +galleryId === gallery.id)
-  console.log(choice)
-  return (
-    <h2>{choice.name}</h2>
-  )
+    return (
+      <h2>{choice.name}</h2>
+    )
 }
 
 export default GalleryView;
