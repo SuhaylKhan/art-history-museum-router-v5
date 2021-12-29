@@ -1,9 +1,14 @@
+import { Link } from 'react-router-dom';
 
-function ArtImageTile() {
+function ArtImageTile({gallery}) {
+    const image = gallery.objects[0].images[0];
+    // console.log(images[0].baseimageurl)
     return (
-        <h1>whatever</h1>
+        <Link to={`/galleries/${gallery.id}/art/${image.imageid}`}>
+            <img src={image.baseimageurl}></img>
+        </Link>
     )
 }
 
 
-export default ArtImageTile
+export default ArtImageTile;
